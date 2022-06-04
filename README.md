@@ -169,6 +169,20 @@ ps -efc c를 추가하여 명령이름까지 보여줌
 |-p|각 프로세스 ID에 대해 한 행씩 출력|
 |command|지정한 명령어를 실행|
 
+***kill이란?***
+
+**프로세스를 죽이는것**
+
+**프로세스마다 고유에 PID값이 존재하고 PID값으로 프로세스를 죽인다.-9는 강제종료,-15는 작업 종료**
+
+사용법:
+
+***kill_옵션PID***
+
+<img width="413" alt="image" src="https://user-images.githubusercontent.com/106620115/172021155-c10d0838-50cc-4979-a32a-c744e3542be5.png">
+<img width="413" alt="image" src="https://user-images.githubusercontent.com/106620115/172021163-d8b63851-d3a7-40c8-85fb-fb3e691f13f6.png">
+
+
 
 
 
