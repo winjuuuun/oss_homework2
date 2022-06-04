@@ -182,6 +182,35 @@ ps -efc c를 추가하여 명령이름까지 보여줌
 <img width="413" alt="image" src="https://user-images.githubusercontent.com/106620115/172021155-c10d0838-50cc-4979-a32a-c744e3542be5.png">
 <img width="413" alt="image" src="https://user-images.githubusercontent.com/106620115/172021163-d8b63851-d3a7-40c8-85fb-fb3e691f13f6.png">
 
+***vim에서 매크로 사용하는 방법***
+
+매크로:같은 동작을 반복하게 해주는 것
+
+문제 :
+
+<img width="548" alt="image" src="https://user-images.githubusercontent.com/106620115/172025573-d1b52ef1-1e1e-4e6b-a512-bf7f870f937c.png">
+
+**이제 매크로를 통해 가운데 공백 뒤의 글자들을 다 없애기**
+
+**매크로 실행 하는 방법**
+
+1.명령모드에서 q[Name] 예시로 qt,qg,qq 이렇게 입력하면 기록중이라는 글을 볼수 있다. qt로 했다고 가정
+2.이제 매크로가 동작중이니 매크로가 실행시키면 어떻게 동작할것인지 정해준다.공백 오른쪽에 있는 글자를 없애고 싶으니
+먼저 shift + ->로 옮겨준다. (작업을 되돌리고 싶을떄는 명령모드에서 :u 하기)
+
+<img width="549" alt="image" src="https://user-images.githubusercontent.com/106620115/172025922-7fc2ed43-983d-4719-91db-3de877bac504.png">
+
+3.그 다음 15x를 입력해서 커서 위치에서 15글자를 없애준다.
+
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/106620115/172025978-4ad4bf34-d24f-4e30-8261-01a2f7475193.png">
+
+4. 지운뒤 다음 라인으로 이동해주고 매크로를 끝내기 위해 q를 다시 입력,그럼 t라는 매크로가 만들어진다.
+5. 등록된 매크로를 실행하는 방법은 @[name]이다. @[name]을 입력하면 아까 한 행동들이 자동으로 실행
+
+<img width="547" alt="image" src="https://user-images.githubusercontent.com/106620115/172026056-6e3379e1-a8e1-4d5f-a1f4-6628d37f19f0.png">
+
+6.@[name]앞에 숫자@[name]하면 숫자에 들어간 만큼 매크로를 실행한다. 여기서는 15@t를 입력하면 다 사라진다.
+
 
 
 
