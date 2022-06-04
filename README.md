@@ -127,6 +127,23 @@ ps
 |PRI|실제 실행 우선순위|
 |NI|nice 우선순위 번호|
 
+**ps명령어 사용 예시**
 
+ps ax:시스템에 동작중인 모두 프로세스를 보고 싶을때 위와 같은 명령어를 사용하면 BSD포맷으로 출력해준다.PID,TTY,STAT,TIME,COMMAND정보가 뜨고 사용자기준의 다양한 정보들을 출력해주고 싶으면 u옵션을 껴서 aux로 구성
+ps aux:시스템에 동작중인 모든 프로세스를 소유자 정보와 함께 다양한 정보를 출력(BSD포맷으로 출력)
+필드들이 늘어나서 USER,%CPU,%MEM,VSZ,RSS등등 다양한 정보를 한번에 보기 쉽게 출력해준다.ps aux|grep은 특정 프로세스에 대해서 보고 싶을때 사용
+Ps -ef:SYstem V계열 옵션 으로 ps aux와 동일 ps -ef|more는 추가로 한 페이지씩 화면에 출력해준다.
+UID,PID,PPID,C,STIME,TTY,TIME,CMD정보를 볼수 있다.
+ps -el|head:긴 포맷으로 출력하고 싶을때는 -l옵션,F,S,PRI,NI,ADDR 더 많은 정보를 알수있다.
+ps -fp[PID]:PID를 키워드로 프로세스 정보를 확인,-p옵션을 써주면 된다.
+ps -U root -u root:특정 사용자가 돌리는 프로세스의 정보를 알고 싶을때 real uid와 uid를 의미하는 옵션
+ps -t pts/18:특정 TTY에서 실행되는 프로세스 또한 뽑아서 확인할수있다.-t옵션을 사용
+ps -e -o pid,ppid,uname,pcpu,pmem,comm,tty|head:-o옵션을 사용하면 원하는 컬럼만 보이도록 포맷을 정할수있다.
 
+**ps명령어 요약**
+
+ps -ㅣ 상세 내용 보여줌
+ps -e 모든 프로세스 보여줌
+ps -ef 모든 프로세스 모든 정보를 출력
+ps -efc c를 추가하여 명령이름까지 보여줌
 
